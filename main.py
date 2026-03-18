@@ -131,12 +131,11 @@ def send_email(config, subject, content):
 
 def is_work_time():
     """
-    判断当前时间是否在早上 8 点到晚上 9 点，如果是则返回真，否则为假。
+    判断当前时间是否在早上 8 点到晚上 10 点，如果是则返回真，否则为假。
     """
     now = datetime.now()
     hour = now.hour
-    # 8 点到 21 点 (21 点整通常视为结束，故 < 21)
-    if 8 <= hour < 21:
+    if 8 <= hour < 22:
         return True
     return False
 
